@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ofertas Fitness</title>
+<meta name="description" content="Os achados de suplemento, roupa e equipamento do nosso Instagram, com link direto para a loja.">
+<meta name="theme-color" content="#1F0447">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1F0447;--card:#2B0A63;--violet:#6C2BD9;--deep:#3D1180;--pink:#F0479F;--lilac:#C792F5;--mist:#E3D0FF}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:#fff;font-family:Poppins,system-ui,sans-serif;line-height:1.35;padding:0 16px calc(32px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto}
+header{display:flex;align-items:center;gap:12px;padding:20px 0 8px}
+header img{width:48px;height:48px;border-radius:14px}
+.brand{display:flex;flex-direction:column;font-weight:800;font-size:20px;line-height:1;letter-spacing:-.02em}
+.brand span:last-child{color:var(--lilac)}
+h1{font-size:clamp(30px,8.5vw,44px);font-weight:900;line-height:1;letter-spacing:-.04em;margin:18px 0 6px}
+h1 em{font-style:normal;color:var(--pink)}
+.lead{color:var(--mist);font-weight:500;font-size:15px}
+.ticket{position:relative;display:flex;align-items:center;gap:14px;margin:20px 0 28px;padding:16px 16px 16px 26px;background:var(--violet);border-radius:22px;box-shadow:0 8px 0 var(--deep);text-decoration:none}
+.ticket::before,.ticket::after{content:"";position:absolute;top:calc(50% - 13px);width:26px;height:26px;border-radius:50%;background:var(--bg)}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket .tg{flex:none;width:44px;height:44px}
+.ticket .txt{flex:1;min-width:0}
+.ticket b{display:block;font-size:17px;font-weight:800;line-height:1.15}
+.ticket small{display:block;color:var(--mist);font-size:13px;font-weight:500;margin-top:2px}
+.ticket .btn{flex:none;background:#fff;color:var(--deep);font-weight:800;font-size:14px;padding:10px 14px;border-radius:999px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media (min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column;gap:8px;min-width:0;background:var(--card);border:2px solid var(--violet);border-radius:18px;padding:8px}
+.photo{position:relative;aspect-ratio:1;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.photo img{width:86%;height:86%;object-fit:contain}
+.off{position:absolute;top:6px;left:6px;background:var(--pink);font-size:12px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:.02em}
+.info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;padding:0 2px}
+h2{font-size:13px;font-weight:700;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.price{display:flex;flex-direction:column;margin-top:auto}
+.price s{color:var(--mist);font-size:12px;font-weight:600;opacity:.8}
+.price strong{font-size:21px;font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.price small{color:var(--mist);font-size:11px}
+.seen{color:var(--lilac);font-size:10px;font-weight:500}
+.go{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;background:var(--pink);border-radius:12px;font-weight:800;font-size:14px;text-decoration:none}
+.go:active,.ticket:active{transform:translateY(2px)}
+.go:focus-visible,.ticket:focus-visible{outline:3px solid var(--mist);outline-offset:3px}
+.empty{color:var(--mist);text-align:center;padding:40px 0}
+footer{color:var(--lilac);font-size:12px;line-height:1.5;margin-top:32px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="logo.jpg" alt="" width="48" height="48"><div class="brand"><span>ofertas</span><span>fitness</span></div></header>
+  <h1>Os achados do <em>nosso Insta</em></h1>
+  <p class="lead">Toca no produto e vai direto pra loja.</p>
+  <a class="ticket" href="https://t.me/ofertas_fitness0" target="_blank" rel="noopener">
+    <svg class="tg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#2AABEE"/><path fill="#fff" d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.01 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.33.02.09.04.3.02.47-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.22-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.79-.42-1.22.26-1.92.18-.18 3.25-2.98 3.31-3.23 0-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.8 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.24-1.35-.37-1.3-.79.03-.22.33-.44.9-.66z"/></svg>
+    <div class="txt"><b>Ofertas todo dia no Telegram</b><small>Suplemento, roupa e equipamento</small></div>
+    <span class="btn">Entrar</span>
+  </a>
+  <main class="grid">
+  <article class="card">
+    <div class="photo"><img src="https://m.media-amazon.com/images/I/31AwiU1VkWL.jpg" alt="" loading="lazy" decoding="async"><span class="off">47% OFF</span></div>
+    <div class="info">
+      <h2>Chinelo Fila Drifter Foam Feminino</h2>
+      <div class="price">
+        <s>R$ 149,99</s>
+        <strong>R$ 79,90</strong>
+      </div>
+      <p class="seen">Visto 28/10, 08:52</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0GV563R39?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener">Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card">
+    <div class="photo"><img src="https://m.media-amazon.com/images/I/513+lXIYkEL.jpg" alt="" loading="lazy" decoding="async"><span class="off">50% OFF</span></div>
+    <div class="info">
+      <h2>Legging Mizuno Essence 2.0 Feminina</h2>
+      <div class="price">
+        <s>R$ 179,99</s>
+        <strong>R$ 90,00</strong>
+      </div>
+      <p class="seen">Visto 28/10, 09:00</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0DPRJX62F?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener">Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card">
+    <div class="photo"><img src="https://http2.mlstatic.com/D_NQ_NP_642093-MLB113986654768_072026-F.jpg" alt="" loading="lazy" decoding="async"><span class="off">48% OFF</span></div>
+    <div class="info">
+      <h2>Tênis Adidas Feminino Confortável Macio Leve Treino</h2>
+      <div class="price">
+        <s>R$ 399,99</s>
+        <strong>R$ 207,89</strong>
+      </div>
+      <p class="seen">Visto 27/10, 15:02</p>
+    </div>
+    <a class="go" href="https://meli.la/33zQXWK" target="_blank" rel="sponsored nofollow noopener">Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card">
+    <div class="photo"><img src="https://cf.shopee.com.br/file/br-11134207-81ztc-mj9vukr0feo684" alt="" loading="lazy" decoding="async"><span class="off">17% OFF</span></div>
+    <div class="info">
+      <h2>Whey Ultra Protein Concentrado Pote 900g - Ftw</h2>
+      <div class="price">
+        <s>R$ 68,93</s>
+        <strong>R$ 56,90</strong>
+      </div>
+      <p class="seen">Visto 28/10, 12:01</p>
+    </div>
+    <a class="go" href="https://s.shopee.com.br/1BW41inC2" target="_blank" rel="sponsored nofollow noopener">Shopee <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card">
+    <div class="photo"><img src="https://m.media-amazon.com/images/I/71Gu7dtU0CL.jpg" alt="" loading="lazy" decoding="async"><span class="off">30% OFF</span></div>
+    <div class="info">
+      <h2>Songmics Conjunto De Halteres 2 Em</h2>
+      <div class="price">
+        <s>R$ 499,99</s>
+        <strong>R$ 349,98</strong>
+      </div>
+      <p class="seen">Visto 28/10, 11:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0CB44845Q?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener">Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card">
+    <div class="photo"><img src="https://m.media-amazon.com/images/I/81b1bz4j7WL.jpg" alt="" loading="lazy" decoding="async"><span class="off">50% OFF</span></div>
+    <div class="info">
+      <h2>Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata</h2>
+      <div class="price">
+        <s>R$ 999,99</s>
+        <strong>R$ 498,99</strong>
+      </div>
+      <p class="seen">Visto 28/10, 11:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B07C8GL8TC?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener">Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  </main>
+  <footer>Links de afiliado: podemos ganhar comissão nas compras, sem custo extra para você.<br>Como associado da Amazon, ganhamos com compras qualificadas.<br>Preços e estoque mudam a qualquer momento; vale o que estiver na loja.</footer>
+</div>
+</body>
+</html>
