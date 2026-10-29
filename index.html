@@ -3,9 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ofertas Fitness</title>
-<meta name="description" content="Os achados de suplemento, roupa e equipamento do nosso Instagram, com link direto para a loja.">
+<title>Ofertas Fitness: suplementos, tênis e roupas de treino em promoção</title>
+<meta name="description" content="Suplementos, tênis, roupas e acessórios com ofertas selecionadas todos os dias na Amazon, Mercado Livre e Shopee.">
 <meta name="theme-color" content="#1F0447">
+<link rel="canonical" href="https://ofertasfitness.github.io/">
+<link rel="icon" href="logo.jpg"><link rel="apple-touch-icon" href="logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ofertas Fitness">
+<meta property="og:title" content="Ofertas Fitness: seu treino merece preços melhores">
+<meta property="og:description" content="Suplementos, tênis, roupas e acessórios com ofertas selecionadas todos os dias.">
+<meta property="og:url" content="https://ofertasfitness.github.io/">
+<meta property="og:image" content="https://ofertasfitness.github.io/logo.jpg">
+<meta name="twitter:card" content="summary">
 <script data-goatcounter="https://ofertasfitness.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,128 +25,499 @@
 html{-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:#fff;font-family:Poppins,system-ui,sans-serif;line-height:1.35;padding:0 16px calc(32px + env(safe-area-inset-bottom))}
 a{color:inherit}
+[hidden]{display:none!important}
 .wrap{max-width:960px;margin:0 auto}
-header{display:flex;align-items:center;gap:12px;padding:20px 0 8px}
-header img{width:48px;height:48px;border-radius:14px}
-.brand{display:flex;flex-direction:column;font-weight:800;font-size:20px;line-height:1;letter-spacing:-.02em}
-.brand span:last-child{color:var(--lilac)}
-h1{font-size:clamp(30px,8.5vw,44px);font-weight:900;line-height:1;letter-spacing:-.04em;margin:18px 0 6px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:12px 0 4px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1}
+.brand img{width:36px;height:36px;border-radius:10px}
+.brand span{color:var(--lilac)}
+.ig{display:flex;width:44px;height:44px;align-items:center;justify-content:center;border-radius:12px;color:var(--mist)}
+.ig svg{width:26px;height:26px}
+h1{font-size:clamp(26px,7.4vw,40px);font-weight:900;line-height:1.05;letter-spacing:-.035em;margin:10px 0 6px}
 h1 em{font-style:normal;color:var(--pink)}
-.lead{color:var(--mist);font-weight:500;font-size:15px}
-.ticket{position:relative;display:flex;align-items:center;gap:14px;margin:20px 0 28px;padding:16px 16px 16px 26px;background:var(--violet);border-radius:22px;box-shadow:0 8px 0 var(--deep);text-decoration:none}
-.ticket::before,.ticket::after{content:"";position:absolute;top:calc(50% - 13px);width:26px;height:26px;border-radius:50%;background:var(--bg)}
-.ticket::before{left:-13px}.ticket::after{right:-13px}
-.ticket .tg{flex:none;width:44px;height:44px}
-.ticket .txt{flex:1;min-width:0}
-.ticket b{display:block;font-size:17px;font-weight:800;line-height:1.15}
-.ticket small{display:block;color:var(--mist);font-size:13px;font-weight:500;margin-top:2px}
-.ticket .btn{flex:none;background:#fff;color:var(--deep);font-weight:800;font-size:14px;padding:10px 14px;border-radius:999px}
+.lead{color:var(--mist);font-weight:500;font-size:14px}
+.ticket{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin:14px 0 0;padding:10px 12px 10px 20px;background:var(--violet);border-radius:18px;box-shadow:0 4px 0 var(--deep);text-decoration:none}
+.ticket+.ticket{margin-top:10px}
+.ticket::before,.ticket::after{content:"";position:absolute;top:calc(50% - 9px);width:18px;height:18px;border-radius:50%;background:var(--bg)}
+.ticket::before{left:-9px}.ticket::after{right:-9px}
+.ticket svg{width:32px;height:32px}
+.ticket b{display:block;font-size:14px;font-weight:800;line-height:1.15}
+.ticket small{display:block;color:var(--mist);font-size:11px;font-weight:500;line-height:1.25;margin-top:1px}
+.ticket .btn{background:#fff;color:var(--deep);font-weight:800;font-size:13px;padding:9px 12px;border-radius:999px;white-space:nowrap}
+.trust{margin:18px 0 0;color:var(--mist);font-size:13px;font-weight:500}
+.how{margin-top:6px;color:var(--lilac);font-size:12px}
+.how summary{cursor:pointer;font-weight:600;padding:4px 0}
+.how p{color:var(--mist);margin-top:4px;line-height:1.5}
+.chips{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:18px -16px 0;padding:10px 16px;background:var(--bg)}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;min-height:38px;padding:0 14px;border:2px solid var(--violet);border-radius:999px;background:transparent;color:#fff;font:600 13px Poppins,system-ui,sans-serif;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--pink);border-color:var(--pink);font-weight:800}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 2px}
+.bar h2{font-size:17px;white-space:nowrap;font-weight:800;letter-spacing:-.02em}
+.bar select{min-height:36px;max-width:132px;padding:0 8px;border:2px solid var(--violet);border-radius:10px;background:var(--card);color:#fff;font:600 13px Poppins,system-ui,sans-serif}
+.updated{color:var(--lilac);font-size:11px;margin-bottom:10px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:14px}}
 @media (min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
 .card{display:flex;flex-direction:column;gap:8px;min-width:0;background:var(--card);border:2px solid var(--violet);border-radius:18px;padding:8px}
-.photo{position:relative;aspect-ratio:1;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.photo{position:relative;display:flex;aspect-ratio:1;border-radius:12px;background:#fff;align-items:center;justify-content:center;overflow:hidden}
 .photo img{width:86%;height:86%;object-fit:contain}
-.off{position:absolute;top:6px;left:6px;background:var(--pink);font-size:12px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:.02em}
-.info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;padding:0 2px}
-h2{font-size:13px;font-weight:700;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
-.price{display:flex;flex-direction:column;margin-top:auto}
+.off{position:absolute;top:6px;left:6px;background:var(--pink);font-size:13px;font-weight:900;padding:3px 9px;border-radius:999px;letter-spacing:.01em;box-shadow:0 3px 0 var(--deep)}
+.info{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;padding:0 2px}
+.meta{color:var(--lilac);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+h3{font-size:13px;font-weight:700;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.name{text-decoration:none}
+.seal{color:var(--mist);font-size:11px;font-weight:600}
+.price{display:flex;flex-direction:column;margin-top:auto;padding-top:2px}
 .price s{color:var(--mist);font-size:12px;font-weight:600;opacity:.8}
-.price strong{font-size:21px;font-weight:900;letter-spacing:-.03em;line-height:1.1}
+.price strong{font-size:23px;font-weight:900;letter-spacing:-.03em;line-height:1.05}
 .price small{color:var(--mist);font-size:11px}
+.save{align-self:flex-start;margin-top:4px;background:rgba(240,71,159,.18);color:#FFB3DA;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.coupon{color:#FFD9EC;font-size:11px;font-weight:600;line-height:1.3}
 .seen{color:var(--lilac);font-size:10px;font-weight:500}
-.go{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;background:var(--pink);border-radius:12px;font-weight:800;font-size:14px;text-decoration:none}
-.go:active,.ticket:active{transform:translateY(2px)}
-.go:focus-visible,.ticket:focus-visible{outline:3px solid var(--mist);outline-offset:3px}
-.empty{color:var(--mist);text-align:center;padding:40px 0}
+.go{display:flex;align-items:center;justify-content:center;gap:4px;min-height:46px;padding:4px 8px;background:var(--pink);border-radius:12px;font-weight:800;font-size:13px;line-height:1.15;text-align:center;text-decoration:none}
+.invite{grid-column:1/-1}
+.inv{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--deep);border:2px dashed var(--lilac);border-radius:16px;font-size:13px;font-weight:500;text-decoration:none}
+.inv svg{flex:none;width:32px;height:32px}
+.inv b{color:var(--pink);font-weight:800;white-space:nowrap}
+.more{display:block;width:100%;min-height:46px;margin-top:14px;border:2px solid var(--violet);border-radius:14px;background:transparent;color:#fff;font:700 14px Poppins,system-ui,sans-serif;cursor:pointer}
+.end{margin-top:28px}
+.end .ticket{margin:0}
+.go:active,.ticket:active,.inv:active{transform:translateY(2px)}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--mist);outline-offset:3px}
+.empty{grid-column:1/-1;color:var(--mist);text-align:center;padding:40px 0}
 footer{color:var(--lilac);font-size:12px;line-height:1.5;margin-top:32px;text-align:center}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header><img src="logo.jpg" alt="" width="48" height="48"><div class="brand"><span>ofertas</span><span>fitness</span></div></header>
-  <h1>Os achados do <em>nosso Insta</em></h1>
-  <p class="lead">Toca no produto e vai direto pra loja.</p>
-  <a class="ticket" href="https://t.me/ofertas_fitness0" target="_blank" rel="noopener" data-goatcounter-click="telegram" data-goatcounter-title="Entrar no canal do Telegram">
-    <svg class="tg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#2AABEE"/><path fill="#fff" d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.01 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.33.02.09.04.3.02.47-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.22-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.79-.42-1.22.26-1.92.18-.18 3.25-2.98 3.31-3.23 0-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.8 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.24-1.35-.37-1.3-.79.03-.22.33-.44.9-.66z"/></svg>
-    <div class="txt"><b>Ofertas todo dia no Telegram</b><small>Suplemento, roupa e equipamento</small></div>
-    <span class="btn">Entrar</span>
-  </a>
-  <main class="grid">
-  <article class="card">
-    <div class="photo"><img src="https://m.media-amazon.com/images/I/31AwiU1VkWL.jpg" alt="" loading="lazy" decoding="async"><span class="off">47% OFF</span></div>
+  <header class="top">
+    <a class="brand" href="./"><img src="logo.jpg" alt="" width="36" height="36"><div>ofertas <span>fitness</span></div></a>
+    <a class="ig" href="https://www.instagram.com/ofertas_fitness0/" target="_blank" rel="noopener" aria-label="Instagram do Ofertas Fitness" data-goatcounter-click="instagram" data-goatcounter-title="Abrir o Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.6c2.4 0 2.7 0 3.6.05 2.4.1 3.6 1.3 3.7 3.7.04.95.05 1.2.05 3.6s0 2.7-.05 3.6c-.1 2.4-1.3 3.6-3.7 3.7-.95.04-1.2.05-3.6.05s-2.7 0-3.6-.05c-2.4-.1-3.6-1.3-3.7-3.7C4.6 14.7 4.6 14.4 4.6 12s0-2.7.05-3.6c.1-2.4 1.3-3.6 3.7-3.7.95-.04 1.2-.05 3.6-.05zM12 3c-2.4 0-2.7 0-3.7.05-3.3.15-5.1 2-5.25 5.25C3 9.3 3 9.6 3 12s0 2.7.05 3.7c.15 3.3 2 5.1 5.25 5.25C9.3 21 9.6 21 12 21s2.7 0 3.7-.05c3.3-.15 5.1-2 5.25-5.25.05-1 .05-1.3.05-3.7s0-2.7-.05-3.7c-.15-3.3-2-5.1-5.25-5.25C14.7 3 14.4 3 12 3z"/></svg></a>
+  </header>
+  <h1>Seu treino merece <em>preços melhores.</em></h1>
+  <p class="lead">Suplementos, tênis, roupas e acessórios com ofertas selecionadas todos os dias.</p>
+  <a class="ticket" href="https://chat.whatsapp.com/GyD2l4vAVY9Ckh1MeWwHt0" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-topo" data-goatcounter-title="Entrar no grupo do WhatsApp (topo)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M12.04 5.5a6.4 6.4 0 0 0-5.5 9.68l-.9 3.3 3.38-.89a6.4 6.4 0 1 0 3.02-12.09zm0 11.7c-.96 0-1.9-.26-2.72-.75l-.2-.12-2 .53.53-1.96-.13-.2a5.3 5.3 0 1 1 4.52 2.5zm2.9-3.97c-.16-.08-.94-.46-1.09-.52-.14-.05-.25-.08-.36.08-.1.16-.41.52-.5.63-.1.1-.19.12-.35.04a4.36 4.36 0 0 1-2.17-1.9c-.16-.28.17-.26.47-.86.05-.1.03-.2-.01-.27-.04-.08-.36-.87-.5-1.19-.13-.31-.26-.27-.36-.27h-.3a.59.59 0 0 0-.43.2 1.8 1.8 0 0 0-.56 1.34c0 .79.57 1.55.65 1.66.08.1 1.13 1.72 2.73 2.41 1.01.44 1.4.47 1.91.4.31-.05.94-.39 1.08-.76.13-.37.13-.69.09-.76-.04-.06-.15-.1-.3-.18z"/></svg><div><b>💚 Entre no Grupo VIP</b><small>Promoções fitness direto no seu WhatsApp</small></div><span class="btn">Entrar →</span></a>
+  <a class="ticket" href="https://t.me/ofertas_fitness0" target="_blank" rel="noopener" data-goatcounter-click="telegram" data-goatcounter-title="Entrar no canal do Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#2AABEE"/><path fill="#fff" d="M5.43 11.87c3.5-1.52 5.83-2.53 7-3.01 3.33-1.39 4.02-1.63 4.47-1.64.1 0 .32.02.47.14.12.1.15.23.17.33.02.09.04.3.02.47-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.22-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.79-.42-1.22.26-1.92.18-.18 3.25-2.98 3.31-3.23 0-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.8 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.24-1.35-.37-1.3-.79.03-.22.33-.44.9-.66z"/></svg><div><b>✈️ Prefere Telegram?</b><small>As mesmas ofertas no nosso canal</small></div><span class="btn">Entrar →</span></a>
+  <p class="trust">💜 Selecionamos oportunidades fitness para você economizar sem perder tempo.</p>
+  <details class="how"><summary>Como escolhemos as ofertas</summary><p>Acompanhamos os preços na Amazon, no Mercado Livre e na Shopee. Só entra aqui produto do universo fitness, com foto e pelo menos 15% abaixo do preço de referência (o "de" da loja ou a média que registramos). Os destaques pesam o desconto, quanto você economiza em reais, selos da loja como "menor preço em 365 dias" e os produtos que mais procuram, como creatina, whey e tênis de marca. Ofertas da Amazon ficam até 24h; as demais, até 3 dias.</p></details>
+  <nav class="chips" aria-label="Categorias"><button type="button" data-cat="destaques" data-title="🔥 Ofertas em destaque" aria-pressed="true">🔥 Destaques</button><button type="button" data-cat="suplementos" data-title="🥤 Suplementos" aria-pressed="false">🥤 Suplementos</button><button type="button" data-cat="tenis" data-title="👟 Tênis" aria-pressed="false">👟 Tênis</button><button type="button" data-cat="roupas" data-title="👕 Roupas" aria-pressed="false">👕 Roupas</button><button type="button" data-cat="equipamentos" data-title="🏋️ Equipamentos" aria-pressed="false">🏋️ Equipamentos</button><button type="button" data-cat="acessorios" data-title="🚴 Acessórios" aria-pressed="false">🚴 Acessórios</button><button type="button" data-cat="todas" data-title="🛍️ Todas as ofertas" aria-pressed="false">🛍️ Todas</button></nav>
+  <div class="bar"><h2 id="sec">🔥 Ofertas em destaque</h2>
+    <select id="sort" aria-label="Ordenar ofertas"><option value="score">Destaques</option><option value="at">Mais recentes</option><option value="off">Maior desconto</option><option value="low">Menor preço</option><option value="high">Maior preço</option></select></div>
+  <p class="updated">Vitrine atualizada em 29/10 às 08:00 · alguns links geram comissão para nós, sem custo extra para você</p>
+  <main class="grid" id="grid">
+  <article class="card" data-cat="suplementos" data-score="77.3" data-at="1793199679522" data-off="17" data-price="56.9" data-top>
+    <a class="photo" href="https://s.shopee.com.br/4fxMoj0pr9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-23198212585" data-goatcounter-title="Whey Ultra Protein Concentrado Pote 900g - Ftw" tabindex="-1" aria-hidden="true"><img src="https://cf.shopee.com.br/file/br-11134207-81ztc-mj9vukr0feo684" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-17%</span></a>
     <div class="info">
-      <h2>Chinelo Fila Drifter Foam Feminino</h2>
+      <p class="meta">Suplementos · Ftw</p>
+      <h3><a class="name" href="https://s.shopee.com.br/4fxMoj0pr9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-23198212585" data-goatcounter-title="Whey Ultra Protein Concentrado Pote 900g - Ftw" title="Whey Ultra Protein Concentrado Pote 900g - Ftw">Whey Ultra Protein Concentrado Pote 900g - Ftw</a></h3>
+      
       <div class="price">
-        <s>R$ 149,99</s>
-        <strong>R$ 79,90</strong>
+        <s>R$ 68,93</s>
+        <strong>R$ 56,90</strong>
+        <span class="save">Economize R$ 12,03</span>
       </div>
-      <p class="seen">Visto 28/10, 08:52</p>
+      
+      <p class="seen">Preço consultado em 28/10 às 12:01</p>
     </div>
-    <a class="go" href="https://www.amazon.com.br/dp/B0GV563R39?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV563R39" data-goatcounter-title="Chinelo Fila Drifter Foam Feminino">Amazon <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://s.shopee.com.br/4fxMoj0pr9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-23198212585" data-goatcounter-title="Whey Ultra Protein Concentrado Pote 900g - Ftw">Ver oferta na Shopee <span aria-hidden="true">→</span></a>
   </article>
-  <article class="card">
-    <div class="photo"><img src="https://m.media-amazon.com/images/I/513+lXIYkEL.jpg" alt="" loading="lazy" decoding="async"><span class="off">50% OFF</span></div>
+  <article class="card" data-cat="tenis" data-score="76.2" data-at="1793188396044" data-off="46" data-price="269.9" data-top>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0GYV5T3GS?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GYV5T3GS" data-goatcounter-title="Tênis Mizuno Enigma 3" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/61yqKRacofL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-46%</span></a>
     <div class="info">
-      <h2>Legging Mizuno Essence 2.0 Feminina</h2>
+      <p class="meta">Tênis · Mizuno</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0GYV5T3GS?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GYV5T3GS" data-goatcounter-title="Tênis Mizuno Enigma 3" title="Tênis Mizuno Enigma 3">Tênis Mizuno Enigma 3</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
       <div class="price">
-        <s>R$ 179,99</s>
-        <strong>R$ 90,00</strong>
+        <s>R$ 499,99</s>
+        <strong>R$ 269,90</strong>
+        <span class="save">Economize R$ 230,09</span>
       </div>
-      <p class="seen">Visto 28/10, 09:00</p>
+      
+      <p class="seen">Preço consultado em 28/10 às 08:53</p>
     </div>
-    <a class="go" href="https://www.amazon.com.br/dp/B0DPRJX62F?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0DPRJX62F" data-goatcounter-title="Legging Mizuno Essence 2.0 Feminina">Amazon <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://www.amazon.com.br/dp/B0GYV5T3GS?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GYV5T3GS" data-goatcounter-title="Tênis Mizuno Enigma 3">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
   </article>
-  <article class="card">
-    <div class="photo"><img src="https://http2.mlstatic.com/D_NQ_NP_642093-MLB113986654768_072026-F.jpg" alt="" loading="lazy" decoding="async"><span class="off">48% OFF</span></div>
+  <article class="card" data-cat="tenis" data-score="73.9" data-at="1793188852039" data-off="26" data-price="332.5" data-top>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0FV8FRDGR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FV8FRDGR" data-goatcounter-title="Tênis Unissex Puma Pounce Lite 2" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/71fPu1JTFDL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-26%</span></a>
     <div class="info">
-      <h2>Tênis Adidas Feminino Confortável Macio Leve Treino</h2>
+      <p class="meta">Tênis · Puma</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0FV8FRDGR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FV8FRDGR" data-goatcounter-title="Tênis Unissex Puma Pounce Lite 2" title="Tênis Unissex Puma Pounce Lite 2">Tênis Unissex Puma Pounce Lite 2</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
       <div class="price">
-        <s>R$ 399,99</s>
-        <strong>R$ 207,89</strong>
+        <s>R$ 449,99</s>
+        <strong>R$ 332,50</strong>
+        <span class="save">Economize R$ 117,49</span>
       </div>
-      <p class="seen">Visto 27/10, 15:02 · pode ter mudado</p>
+      
+      <p class="seen">Preço consultado em 28/10 às 09:00</p>
     </div>
-    <a class="go" href="https://meli.la/33zQXWK" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4032090511" data-goatcounter-title="Tênis Adidas Feminino Confortável Macio Leve Treino">Mercado Livre <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://www.amazon.com.br/dp/B0FV8FRDGR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FV8FRDGR" data-goatcounter-title="Tênis Unissex Puma Pounce Lite 2">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
   </article>
-  <article class="card">
-    <div class="photo"><img src="https://http2.mlstatic.com/D_NQ_NP_660944-MLB116965562370_092026-F.jpg" alt="" loading="lazy" decoding="async"><span class="off">78% OFF</span></div>
+  <article class="card" data-cat="tenis" data-score="70.7" data-at="1793271643712" data-off="78" data-price="105.06" data-top>
+    <a class="photo" href="https://meli.la/27UAeGc" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5318134527" data-goatcounter-title="Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_660944-MLB116965562370_092026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-78%</span></a>
     <div class="info">
-      <h2>Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full</h2>
+      <p class="meta">Tênis · Mizuno</p>
+      <h3><a class="name" href="https://meli.la/27UAeGc" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5318134527" data-goatcounter-title="Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full" title="Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full">Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full</a></h3>
+      
       <div class="price">
         <s>R$ 481,99</s>
         <strong>R$ 105,06</strong>
+        <span class="save">Economize R$ 376,93</span>
       </div>
-      <p class="seen">Visto 29/10, 08:00</p>
+      
+      <p class="seen">Preço consultado em 29/10 às 08:00</p>
     </div>
-    <a class="go" href="https://meli.la/27UAeGc" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5318134527" data-goatcounter-title="Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full">Mercado Livre <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://meli.la/27UAeGc" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5318134527" data-goatcounter-title="Tênis Mizuno Rider 26 Premium Ultra Leve Confortável Full">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
   </article>
-  <article class="card">
-    <div class="photo"><img src="https://m.media-amazon.com/images/I/61fi2Xn94mL.jpg" alt="" loading="lazy" decoding="async"><span class="off">34% OFF</span></div>
+  <article class="card" data-cat="roupas" data-score="68.8" data-at="1793188853233" data-off="50" data-price="90" data-top>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0DPRJX62F?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0DPRJX62F" data-goatcounter-title="Legging Mizuno Essence 2.0 Feminina" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/513+lXIYkEL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-50%</span></a>
     <div class="info">
-      <h2>Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades</h2>
+      <p class="meta">Roupas · Mizuno</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0DPRJX62F?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0DPRJX62F" data-goatcounter-title="Legging Mizuno Essence 2.0 Feminina" title="Legging Mizuno Essence 2.0 Feminina">Legging Mizuno Essence 2.0 Feminina</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
       <div class="price">
-        <s>R$ 330,00</s>
-        <strong>R$ 216,60</strong>
+        <s>R$ 179,99</s>
+        <strong>R$ 90,00</strong>
+        <span class="save">Economize R$ 89,99</span>
       </div>
-      <p class="seen">Visto 28/10, 17:00</p>
+      
+      <p class="seen">Preço consultado em 28/10 às 09:00</p>
     </div>
-    <a class="go" href="https://www.amazon.com.br/dp/B0F68V2VTH?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F68V2VTH" data-goatcounter-title="Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades">Amazon <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://www.amazon.com.br/dp/B0DPRJX62F?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0DPRJX62F" data-goatcounter-title="Legging Mizuno Essence 2.0 Feminina">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
   </article>
-  <article class="card">
-    <div class="photo"><img src="https://m.media-amazon.com/images/I/61UBL+pEtML.jpg" alt="" loading="lazy" decoding="async"><span class="off">65% OFF</span></div>
+  <article class="card" data-cat="tenis" data-score="67.8" data-at="1793188317000" data-off="52" data-price="265" data-top>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0F63BGWGP?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F63BGWGP" data-goatcounter-title="Tênis De Corrida Puma Darter Pro 2" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/71zj9iQ-VSL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-52%</span></a>
     <div class="info">
-      <h2>Top De Treino Feminino Mizuno Essence</h2>
+      <p class="meta">Tênis · Puma</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0F63BGWGP?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F63BGWGP" data-goatcounter-title="Tênis De Corrida Puma Darter Pro 2" title="Tênis De Corrida Puma Darter Pro 2">Tênis De Corrida Puma Darter Pro 2</a></h3>
+      
+      <div class="price">
+        <s>R$ 549,99</s>
+        <strong>R$ 265,00</strong>
+        <span class="save">Economize R$ 284,99</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 08:51</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0F63BGWGP?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F63BGWGP" data-goatcounter-title="Tênis De Corrida Puma Darter Pro 2">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article><div class="invite" id="invite"><a class="inv" href="https://chat.whatsapp.com/GyD2l4vAVY9Ckh1MeWwHt0" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-meio" data-goatcounter-title="Entrar no grupo do WhatsApp (meio)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M12.04 5.5a6.4 6.4 0 0 0-5.5 9.68l-.9 3.3 3.38-.89a6.4 6.4 0 1 0 3.02-12.09zm0 11.7c-.96 0-1.9-.26-2.72-.75l-.2-.12-2 .53.53-1.96-.13-.2a5.3 5.3 0 1 1 4.52 2.5zm2.9-3.97c-.16-.08-.94-.46-1.09-.52-.14-.05-.25-.08-.36.08-.1.16-.41.52-.5.63-.1.1-.19.12-.35.04a4.36 4.36 0 0 1-2.17-1.9c-.16-.28.17-.26.47-.86.05-.1.03-.2-.01-.27-.04-.08-.36-.87-.5-1.19-.13-.31-.26-.27-.36-.27h-.3a.59.59 0 0 0-.43.2 1.8 1.8 0 0 0-.56 1.34c0 .79.57 1.55.65 1.66.08.1 1.13 1.72 2.73 2.41 1.01.44 1.4.47 1.91.4.31-.05.94-.39 1.08-.76.13-.37.13-.69.09-.76-.04-.06-.15-.1-.3-.18z"/></svg><span>🔥 Não perca a próxima promoção de whey e creatina. <b>Entre no grupo grátis →</b></span></a></div>
+  <article class="card" data-cat="suplementos" data-score="64.0" data-at="1793131214904" data-off="26" data-price="43.9" data-top>
+    <a class="photo" href="https://s.shopee.com.br/3g4pct4dto" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-58258320900" data-goatcounter-title="Creatina Monohidratada Dux Nutrition 100% Pura Original – Ganho De Massa Muscular Força" tabindex="-1" aria-hidden="true"><img src="https://cf.shopee.com.br/file/br-11134207-820lp-molis0zyjyme72" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-26%</span></a>
+    <div class="info">
+      <p class="meta">Suplementos · Dux</p>
+      <h3><a class="name" href="https://s.shopee.com.br/3g4pct4dto" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-58258320900" data-goatcounter-title="Creatina Monohidratada Dux Nutrition 100% Pura Original – Ganho De Massa Muscular Força" title="Creatina Monohidratada Dux Nutrition 100% Pura Original – Ganho De Massa Muscular Força">Creatina Monohidratada Dux Nutrition 100% Pura Original – Ganho De Massa Muscular Força</a></h3>
+      
+      <div class="price">
+        <s>R$ 59,28</s>
+        <strong>R$ 43,90</strong>
+        <span class="save">Economize R$ 15,38</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 27/10 às 17:00 · pode ter mudado</p>
+    </div>
+    <a class="go" href="https://s.shopee.com.br/3g4pct4dto" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-58258320900" data-goatcounter-title="Creatina Monohidratada Dux Nutrition 100% Pura Original – Ganho De Massa Muscular Força">Ver oferta na Shopee <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="acessorios" data-score="63.9" data-at="1793188327354" data-off="47" data-price="79.9" data-top>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0GV563R39?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV563R39" data-goatcounter-title="Chinelo Fila Drifter Foam Feminino" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/31AwiU1VkWL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-47%</span></a>
+    <div class="info">
+      <p class="meta">Acessórios · Fila</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0GV563R39?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV563R39" data-goatcounter-title="Chinelo Fila Drifter Foam Feminino" title="Chinelo Fila Drifter Foam Feminino">Chinelo Fila Drifter Foam Feminino</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 149,99</s>
+        <strong>R$ 79,90</strong>
+        <span class="save">Economize R$ 70,09</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 08:52</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0GV563R39?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV563R39" data-goatcounter-title="Chinelo Fila Drifter Foam Feminino">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="roupas" data-score="61.6" data-at="1793217652020" data-off="65" data-price="45.18" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B089QWH739?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B089QWH739" data-goatcounter-title="Top De Treino Feminino Mizuno Essence" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/61UBL+pEtML.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-65%</span></a>
+    <div class="info">
+      <p class="meta">Roupas · Mizuno</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B089QWH739?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B089QWH739" data-goatcounter-title="Top De Treino Feminino Mizuno Essence" title="Top De Treino Feminino Mizuno Essence">Top De Treino Feminino Mizuno Essence</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
       <div class="price">
         <s>R$ 129,99</s>
         <strong>R$ 45,18</strong>
+        <span class="save">Economize R$ 84,81</span>
       </div>
-      <p class="seen">Visto 28/10, 17:00</p>
+      
+      <p class="seen">Preço consultado em 28/10 às 17:00</p>
     </div>
-    <a class="go" href="https://www.amazon.com.br/dp/B089QWH739?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B089QWH739" data-goatcounter-title="Top De Treino Feminino Mizuno Essence">Amazon <span aria-hidden="true">→</span></a>
+    <a class="go" href="https://www.amazon.com.br/dp/B089QWH739?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B089QWH739" data-goatcounter-title="Top De Treino Feminino Mizuno Essence">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="suplementos" data-score="60.7" data-at="1793217653273" data-off="34" data-price="216.6" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0F68V2VTH?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F68V2VTH" data-goatcounter-title="Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/61fi2Xn94mL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-34%</span></a>
+    <div class="info">
+      <p class="meta">Suplementos · Nutrify</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0F68V2VTH?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F68V2VTH" data-goatcounter-title="Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades" title="Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades">Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades</a></h3>
+      
+      <div class="price">
+        <s>R$ 330,00</s>
+        <strong>R$ 216,60</strong>
+        <span class="save">Economize R$ 113,40</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 17:00</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0F68V2VTH?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0F68V2VTH" data-goatcounter-title="Nutrify Ômega 3 – Suplemento Em Cápsulas – 200 Unidades">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="acessorios" data-score="55.9" data-at="1793190685989" data-off="50" data-price="64.99" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0FG57D8WL?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FG57D8WL" data-goatcounter-title="Chinelo Mizuno Slide Basic, Marinho, Tamanho 39/40" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/31gmD2bM22L.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-50%</span></a>
+    <div class="info">
+      <p class="meta">Acessórios · Mizuno</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0FG57D8WL?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FG57D8WL" data-goatcounter-title="Chinelo Mizuno Slide Basic, Marinho, Tamanho 39/40" title="Chinelo Mizuno Slide Basic, Marinho, Tamanho 39/40">Chinelo Mizuno Slide Basic, Marinho, Tamanho 39/40</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 129,99</s>
+        <strong>R$ 64,99</strong>
+        <span class="save">Economize R$ 65,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 09:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0FG57D8WL?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0FG57D8WL" data-goatcounter-title="Chinelo Mizuno Slide Basic, Marinho, Tamanho 39/40">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="55.2" data-at="1793214060769" data-off="41" data-price="237.99" hidden>
+    <a class="photo" href="https://meli.la/24c8HET" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB7731142954" data-goatcounter-title="Tênis Adidas Acelera 2 Corrida Feminino Verde E Branco Verde 37 Br" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_772512-MLB118526969975_092026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-41%</span></a>
+    <div class="info">
+      <p class="meta">Tênis · Adidas</p>
+      <h3><a class="name" href="https://meli.la/24c8HET" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB7731142954" data-goatcounter-title="Tênis Adidas Acelera 2 Corrida Feminino Verde E Branco Verde 37 Br" title="Tênis Adidas Acelera 2 Corrida Feminino Verde E Branco Verde 37 Br">Tênis Adidas Acelera 2 Corrida Feminino Verde E Branco Verde 37 Br</a></h3>
+      
+      <div class="price">
+        <s>R$ 399,99</s>
+        <strong>R$ 237,99</strong>
+        <span class="save">Economize R$ 162,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 16:01</p>
+    </div>
+    <a class="go" href="https://meli.la/24c8HET" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB7731142954" data-goatcounter-title="Tênis Adidas Acelera 2 Corrida Feminino Verde E Branco Verde 37 Br">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="suplementos" data-score="51.9" data-at="1793190684699" data-off="37" data-price="56.41" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0C39GRSR6?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0C39GRSR6" data-goatcounter-title="Suplemento De Magnésio Em Cápsulas Life Seeds, 350mg, 90 Cápsulas | Bisglicinato, Dimalato E Taurato, Alta Concentração" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/61stRJCXYeL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-37%</span></a>
+    <div class="info">
+      <p class="meta">Suplementos</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0C39GRSR6?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0C39GRSR6" data-goatcounter-title="Suplemento De Magnésio Em Cápsulas Life Seeds, 350mg, 90 Cápsulas | Bisglicinato, Dimalato E Taurato, Alta Concentração" title="Suplemento De Magnésio Em Cápsulas Life Seeds, 350mg, 90 Cápsulas | Bisglicinato, Dimalato E Taurato, Alta Concentração">Suplemento De Magnésio Em Cápsulas Life Seeds, 350mg, 90 Cápsulas | Bisglicinato, Dimalato E Taurato, Alta Concentração</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 89,98</s>
+        <strong>R$ 56,41</strong>
+        <span class="save">Economize R$ 33,57</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 09:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0C39GRSR6?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0C39GRSR6" data-goatcounter-title="Suplemento De Magnésio Em Cápsulas Life Seeds, 350mg, 90 Cápsulas | Bisglicinato, Dimalato E Taurato, Alta Concentração">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="51.1" data-at="1793124121352" data-off="48" data-price="207.89" hidden>
+    <a class="photo" href="https://meli.la/33zQXWK" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4032090511" data-goatcounter-title="Tênis Adidas Feminino Confortável Macio Leve Treino" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_642093-MLB113986654768_072026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-48%</span></a>
+    <div class="info">
+      <p class="meta">Tênis · Adidas</p>
+      <h3><a class="name" href="https://meli.la/33zQXWK" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4032090511" data-goatcounter-title="Tênis Adidas Feminino Confortável Macio Leve Treino" title="Tênis Adidas Feminino Confortável Macio Leve Treino">Tênis Adidas Feminino Confortável Macio Leve Treino</a></h3>
+      
+      <div class="price">
+        <s>R$ 399,99</s>
+        <strong>R$ 207,89</strong>
+        <span class="save">Economize R$ 192,10</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 27/10 às 15:02 · pode ter mudado</p>
+    </div>
+    <a class="go" href="https://meli.la/33zQXWK" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4032090511" data-goatcounter-title="Tênis Adidas Feminino Confortável Macio Leve Treino">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="50.3" data-at="1793188397258" data-off="38" data-price="218.5" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0GV4L11WV?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV4L11WV" data-goatcounter-title="Diadora Heritage - Tênis Esportivo Flex Masculino" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/51Jhm0sZhaL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-38%</span></a>
+    <div class="info">
+      <p class="meta">Tênis</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0GV4L11WV?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV4L11WV" data-goatcounter-title="Diadora Heritage - Tênis Esportivo Flex Masculino" title="Diadora Heritage - Tênis Esportivo Flex Masculino">Diadora Heritage - Tênis Esportivo Flex Masculino</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 349,99</s>
+        <strong>R$ 218,50</strong>
+        <span class="save">Economize R$ 131,49</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 08:53</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0GV4L11WV?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0GV4L11WV" data-goatcounter-title="Diadora Heritage - Tênis Esportivo Flex Masculino">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="equipamentos" data-score="49.6" data-at="1793197887171" data-off="50" data-price="498.99" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B07C8GL8TC?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B07C8GL8TC" data-goatcounter-title="Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/81b1bz4j7WL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-50%</span></a>
+    <div class="info">
+      <p class="meta">Equipamentos</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B07C8GL8TC?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B07C8GL8TC" data-goatcounter-title="Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata" title="Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata">Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 999,99</s>
+        <strong>R$ 498,99</strong>
+        <span class="save">Economize R$ 501,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 11:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B07C8GL8TC?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B07C8GL8TC" data-goatcounter-title="Songmics Halteres De Ferro Fundido 2 Em 1, 10/15 Kg, Ajustável Para Treino Masculino E Feminino, Treinamento Fitness, Musculação, Preto E Prata">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="47.8" data-at="1793212325728" data-off="47" data-price="317.99" hidden>
+    <a class="photo" href="https://meli.la/1xY3Y3G" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5384631267" data-goatcounter-title="Chuteira Adidas Futsal Quadra Preto E Dourado Preto 40 Br" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_652218-MLB119269485709_102026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-47%</span></a>
+    <div class="info">
+      <p class="meta">Tênis · Adidas</p>
+      <h3><a class="name" href="https://meli.la/1xY3Y3G" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5384631267" data-goatcounter-title="Chuteira Adidas Futsal Quadra Preto E Dourado Preto 40 Br" title="Chuteira Adidas Futsal Quadra Preto E Dourado Preto 40 Br">Chuteira Adidas Futsal Quadra Preto E Dourado Preto 40 Br</a></h3>
+      
+      <div class="price">
+        <s>R$ 599,99</s>
+        <strong>R$ 317,99</strong>
+        <span class="save">Economize R$ 282,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 15:32</p>
+    </div>
+    <a class="go" href="https://meli.la/1xY3Y3G" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5384631267" data-goatcounter-title="Chuteira Adidas Futsal Quadra Preto E Dourado Preto 40 Br">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="equipamentos" data-score="47.3" data-at="1793197888429" data-off="30" data-price="349.98" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B0CB44845Q?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0CB44845Q" data-goatcounter-title="Songmics Conjunto De Halteres 2 Em" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/71Gu7dtU0CL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-30%</span></a>
+    <div class="info">
+      <p class="meta">Equipamentos</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B0CB44845Q?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0CB44845Q" data-goatcounter-title="Songmics Conjunto De Halteres 2 Em" title="Songmics Conjunto De Halteres 2 Em">Songmics Conjunto De Halteres 2 Em</a></h3>
+      <p class="seal">🔻 Menor preço em 365 dias</p>
+      <div class="price">
+        <s>R$ 499,99</s>
+        <strong>R$ 349,98</strong>
+        <span class="save">Economize R$ 150,01</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 11:31</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B0CB44845Q?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B0CB44845Q" data-goatcounter-title="Songmics Conjunto De Halteres 2 Em">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="37.8" data-at="1793214062170" data-off="52" data-price="139.99" hidden>
+    <a class="photo" href="https://meli.la/1vQqNk7" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5532075156" data-goatcounter-title="Tênis Kappa Pulse Rx Unissex Corrida Conforto" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_788146-MLB116537413239_082026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-52%</span></a>
+    <div class="info">
+      <p class="meta">Tênis</p>
+      <h3><a class="name" href="https://meli.la/1vQqNk7" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5532075156" data-goatcounter-title="Tênis Kappa Pulse Rx Unissex Corrida Conforto" title="Tênis Kappa Pulse Rx Unissex Corrida Conforto">Tênis Kappa Pulse Rx Unissex Corrida Conforto</a></h3>
+      
+      <div class="price">
+        <s>R$ 289,99</s>
+        <strong>R$ 139,99</strong>
+        <span class="save">Economize R$ 150,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 16:01</p>
+    </div>
+    <a class="go" href="https://meli.la/1vQqNk7" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5532075156" data-goatcounter-title="Tênis Kappa Pulse Rx Unissex Corrida Conforto">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="equipamentos" data-score="33.3" data-at="1793208739830" data-off="15" data-price="333.19" hidden>
+    <a class="photo" href="https://www.amazon.com.br/dp/B083HVJBVR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B083HVJBVR" data-goatcounter-title="Songmics Conjunto De Halteres Hexagonais Com Suporte" tabindex="-1" aria-hidden="true"><img src="https://m.media-amazon.com/images/I/819s6d8ZPoL.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-15%</span></a>
+    <div class="info">
+      <p class="meta">Equipamentos</p>
+      <h3><a class="name" href="https://www.amazon.com.br/dp/B083HVJBVR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B083HVJBVR" data-goatcounter-title="Songmics Conjunto De Halteres Hexagonais Com Suporte" title="Songmics Conjunto De Halteres Hexagonais Com Suporte">Songmics Conjunto De Halteres Hexagonais Com Suporte</a></h3>
+      
+      <div class="price">
+        <s>R$ 391,99</s>
+        <strong>R$ 333,19</strong>
+        <span class="save">Economize R$ 58,80</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 14:32</p>
+    </div>
+    <a class="go" href="https://www.amazon.com.br/dp/B083HVJBVR?tag=insta-offers-20" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="amazon-B083HVJBVR" data-goatcounter-title="Songmics Conjunto De Halteres Hexagonais Com Suporte">Ver oferta na Amazon <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="roupas" data-score="31.5" data-at="1793215898585" data-off="74" data-price="39.32" hidden>
+    <a class="photo" href="https://meli.la/1jS8nj9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4689565015" data-goatcounter-title="Calça Jogger Tactel Masculina Slim Academia Treino Esporte" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_677190-MLB117751376771_092026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-74%</span></a>
+    <div class="info">
+      <p class="meta">Roupas</p>
+      <h3><a class="name" href="https://meli.la/1jS8nj9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4689565015" data-goatcounter-title="Calça Jogger Tactel Masculina Slim Academia Treino Esporte" title="Calça Jogger Tactel Masculina Slim Academia Treino Esporte">Calça Jogger Tactel Masculina Slim Academia Treino Esporte</a></h3>
+      
+      <div class="price">
+        <s>R$ 149,00</s>
+        <strong>R$ 39,32</strong>
+        <span class="save">Economize R$ 109,68</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 28/10 às 16:31</p>
+    </div>
+    <a class="go" href="https://meli.la/1jS8nj9" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB4689565015" data-goatcounter-title="Calça Jogger Tactel Masculina Slim Academia Treino Esporte">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="tenis" data-score="29.8" data-at="1793125867990" data-off="46" data-price="139.99" hidden>
+    <a class="photo" href="https://meli.la/17yfjgr" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5857442960" data-goatcounter-title="Tênis Kappa Pulse Supra Unissex De Corrida Conforto" tabindex="-1" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_802382-MLB117165413363_092026-F.jpg" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-46%</span></a>
+    <div class="info">
+      <p class="meta">Tênis</p>
+      <h3><a class="name" href="https://meli.la/17yfjgr" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5857442960" data-goatcounter-title="Tênis Kappa Pulse Supra Unissex De Corrida Conforto" title="Tênis Kappa Pulse Supra Unissex De Corrida Conforto">Tênis Kappa Pulse Supra Unissex De Corrida Conforto</a></h3>
+      
+      <div class="price">
+        <s>R$ 259,99</s>
+        <strong>R$ 139,99</strong>
+        <span class="save">Economize R$ 120,00</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 27/10 às 15:31 · pode ter mudado</p>
+    </div>
+    <a class="go" href="https://meli.la/17yfjgr" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="mercadolivre-MLB5857442960" data-goatcounter-title="Tênis Kappa Pulse Supra Unissex De Corrida Conforto">Ver oferta no Mercado Livre <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="roupas" data-score="28.2" data-at="1793129414319" data-off="75" data-price="26.99" hidden>
+    <a class="photo" href="https://s.shopee.com.br/5fpu0YxzVF" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-54905119793" data-goatcounter-title="Short Saia Academia Feminino Cintura Alta Legging Fitness" tabindex="-1" aria-hidden="true"><img src="https://cf.shopee.com.br/file/br-11134207-81ztc-mjswxds25a0xbb" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-75%</span></a>
+    <div class="info">
+      <p class="meta">Roupas</p>
+      <h3><a class="name" href="https://s.shopee.com.br/5fpu0YxzVF" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-54905119793" data-goatcounter-title="Short Saia Academia Feminino Cintura Alta Legging Fitness" title="Short Saia Academia Feminino Cintura Alta Legging Fitness">Short Saia Academia Feminino Cintura Alta Legging Fitness</a></h3>
+      
+      <div class="price">
+        <s>R$ 107,96</s>
+        <strong>R$ 26,99</strong>
+        <span class="save">Economize R$ 80,97</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 27/10 às 16:30 · pode ter mudado</p>
+    </div>
+    <a class="go" href="https://s.shopee.com.br/5fpu0YxzVF" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-54905119793" data-goatcounter-title="Short Saia Academia Feminino Cintura Alta Legging Fitness">Ver oferta na Shopee <span aria-hidden="true">→</span></a>
+  </article>
+  <article class="card" data-cat="outros" data-score="25.3" data-at="1793128695752" data-off="73" data-price="26.9" hidden>
+    <a class="photo" href="https://s.shopee.com.br/9V2cZbmpog" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-19243924820" data-goatcounter-title="Roda Abdominal Wct Fitness - Fortalecimento E Definicao Abdominal" tabindex="-1" aria-hidden="true"><img src="https://cf.shopee.com.br/file/sg-11134201-8258g-mut78iw8wsg05d" alt="" width="300" height="300" loading="lazy" decoding="async"><span class="off">-73%</span></a>
+    <div class="info">
+      
+      <h3><a class="name" href="https://s.shopee.com.br/9V2cZbmpog" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-19243924820" data-goatcounter-title="Roda Abdominal Wct Fitness - Fortalecimento E Definicao Abdominal" title="Roda Abdominal Wct Fitness - Fortalecimento E Definicao Abdominal">Roda Abdominal Wct Fitness - Fortalecimento E Definicao Abdominal</a></h3>
+      
+      <div class="price">
+        <s>R$ 99,63</s>
+        <strong>R$ 26,90</strong>
+        <span class="save">Economize R$ 72,73</span>
+      </div>
+      
+      <p class="seen">Preço consultado em 27/10 às 16:18 · pode ter mudado</p>
+    </div>
+    <a class="go" href="https://s.shopee.com.br/9V2cZbmpog" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="shopee-19243924820" data-goatcounter-title="Roda Abdominal Wct Fitness - Fortalecimento E Definicao Abdominal">Ver oferta na Shopee <span aria-hidden="true">→</span></a>
   </article>
   </main>
-  <footer>Links de afiliado: podemos ganhar comissão nas compras, sem custo extra para você.<br>Como associado da Amazon, ganhamos com compras qualificadas.<br>Preços e estoque mudam a qualquer momento; vale o que estiver na loja.<br>Contamos visitas e cliques sem cookies e sem dados pessoais.</footer>
+  <button type="button" class="more" id="more">Ver todas as 24 ofertas</button>
+  <div class="end"><a class="ticket" href="https://chat.whatsapp.com/GyD2l4vAVY9Ckh1MeWwHt0" target="_blank" rel="noopener" data-goatcounter-click="whatsapp-fim" data-goatcounter-title="Entrar no grupo do WhatsApp (fim)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M12.04 5.5a6.4 6.4 0 0 0-5.5 9.68l-.9 3.3 3.38-.89a6.4 6.4 0 1 0 3.02-12.09zm0 11.7c-.96 0-1.9-.26-2.72-.75l-.2-.12-2 .53.53-1.96-.13-.2a5.3 5.3 0 1 1 4.52 2.5zm2.9-3.97c-.16-.08-.94-.46-1.09-.52-.14-.05-.25-.08-.36.08-.1.16-.41.52-.5.63-.1.1-.19.12-.35.04a4.36 4.36 0 0 1-2.17-1.9c-.16-.28.17-.26.47-.86.05-.1.03-.2-.01-.27-.04-.08-.36-.87-.5-1.19-.13-.31-.26-.27-.36-.27h-.3a.59.59 0 0 0-.43.2 1.8 1.8 0 0 0-.56 1.34c0 .79.57 1.55.65 1.66.08.1 1.13 1.72 2.73 2.41 1.01.44 1.4.47 1.91.4.31-.05.94-.39 1.08-.76.13-.37.13-.69.09-.76-.04-.06-.15-.1-.3-.18z"/></svg><div><b>🔥 Não perca a próxima promoção</b><small>Whey, creatina, tênis e mais no grupo do WhatsApp</small></div><span class="btn">Entrar →</span></a></div>
+  <footer>Links de afiliado: podemos ganhar comissão nas compras, sem custo extra para você.<br>Como associado da Amazon, ganhamos com compras qualificadas.<br>Preços e disponibilidade podem mudar a qualquer momento; vale o que estiver na loja.<br>Contamos visitas e cliques sem cookies e sem dados pessoais.</footer>
 </div>
+<script>
+(() => {
+  const grid = document.getElementById('grid'), invite = document.getElementById('invite'), sec = document.getElementById('sec');
+  const sort = document.getElementById('sort'), more = document.getElementById('more'), chips = [...document.querySelectorAll('.chips button')];
+  const cards = [...grid.querySelectorAll('.card')], AFTER = 6;
+  const by = { score: (c) => -c.dataset.score, at: (c) => -c.dataset.at, off: (c) => -c.dataset.off, low: (c) => +c.dataset.price, high: (c) => -c.dataset.price };
+  let cat = 'destaques';
+  function render() {
+    const show = cards.filter((c) => cat === 'todas' || (cat === 'destaques' ? c.hasAttribute('data-top') : c.dataset.cat === cat));
+    show.sort((a, b) => by[sort.value](a) - by[sort.value](b));
+    cards.forEach((c) => (c.hidden = true));
+    show.forEach((c, i) => { c.hidden = false; grid.append(c); if (i + 1 === AFTER) grid.append(invite); });
+    invite.hidden = show.length < AFTER;
+    const chip = chips.find((b) => b.dataset.cat === cat);
+    chips.forEach((b) => b.setAttribute('aria-pressed', b === chip));
+    sec.textContent = chip.dataset.title;
+    if (more) more.hidden = cat !== 'destaques';
+  }
+  const pick = (id) => { cat = id; render(); };
+  chips.forEach((b) => b.addEventListener('click', () => pick(b.dataset.cat)));
+  sort.addEventListener('change', render);
+  if (more) more.addEventListener('click', () => { pick('todas'); sec.scrollIntoView({ behavior: 'smooth' }); });
+})();
+</script>
 </body>
 </html>
